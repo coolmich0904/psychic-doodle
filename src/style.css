@@ -1,47 +1,61 @@
 :root {
+    --nav_font: 'Roboto', sans-serif;
     /* color */
-    --button-color: #f9f9f9; 
-    --background-color: #007236;
-    --second-color: #8bc53f;
-    --font-color: #000000;
+    --color-white: #f9f9f9; 
+    --color-green: #007236;
+    --color-lightGreen: #8bc53f;
+    --color-black: #000000;
 
     /* Size */   
-    --nav-font: 'Roboto', sans-serif;   
-    --size-margin: 3px 2px;
-    --size-padding: 3px 5px;
+    --size-margin: 0px 3px;
+    --size-padding: 5px 5px;
     --size-radius:30px;
+    --base_spacing: 8px;
 
      /* animation */
+     --animation-duration: 300ms;
 }
 
 body {
     height: 100vh;
-    width: 100%;
+    margin: 0;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
 }
 
 nav {
-    display: flex;
+    display:flex;   
+    height: 15%;
+}
+
+.navbar{
     width: 100%;
+   
 }
 
 .navbar, 
-ul {
+ul, form {
     display: flex;
     align-items: center;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--background-color);
-    font-family: var(--nav-font);
+    background-color: var(--color-green);
+    font-family: var(--nav_font);
     padding: var(--size-padding);   
 }
 
 .navbar_donate {
+    width: 20%;
     position:inherit;
-    text-align: center;
-    background-color: var(--second-color);
+    text-align: center;    
+    background-color: var(--color-lightGreen);
+    font-family: var(--nav_font);   
+    padding-top: var(--base_spacing); 
+}
+
+.navbar_donate a{
+    text-decoration: none;
 }
 
 li {
@@ -49,12 +63,37 @@ li {
     margin: var(--size-margin);
 }
 
+.navbar_icons i {
+    color: var(--color-white);
+    cursor: pointer;
+      transition: transform var(--animation-duration) ease;
+}
+
+.navbar_icons i:hover
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn {
+    cursor: pointer;
+    transition: transform var(--animation-duration) ease;
+}
+
 input, 
 .btn {
     padding: var(--size-padding);
-    background: var(--button-color); 
-    color: var(--font-color); 
+    background: var(--color-white); 
+    color: var(--color-black); 
     display: inline-block;    
     border-radius:var(--size-radius);
     font-size: 0.7rem;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        
+    }
 }

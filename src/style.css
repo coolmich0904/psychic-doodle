@@ -24,14 +24,13 @@ body {
     font-size: 18px;
 }
 
-nav {
+.navbar_frame {
     display:flex;   
-    height: 15%;
+    height: 50px;
 }
 
 .navbar{
-    width: 100%;
-   
+    width: 100%;   
 }
 
 .navbar, 
@@ -56,6 +55,8 @@ ul, form {
 
 .navbar_donate a{
     text-decoration: none;
+    color: var(--color-black);
+    font-weight: bold;
 }
 
 li {
@@ -96,11 +97,45 @@ input[type="text"]:focus {
     outline: none
   }
 
+.navbar_toggleBtn {
+    position: absolute;
+    right: 30px;
+    margin-top: var(--base_spacing);
+    display: none;
+}
+
+.logo {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
-    .navbar {
+    /* .logo {
+        display: block;
+    } */
+
+    .navbar_frame,
+    .navbar,
+    .navbar_icons,
+    .navbar_donate {
         flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        
+        align-items: center;
+        width: 100%;  
+        /* display: none;               */
     }
+
+    input,button {
+        width: 100%;
+    }
+
+    /* .navbar_toggleBtn {
+        display: block;
+    } */
+
+    /* .navbar_frame.active,
+    .navbar_menu.active,
+    .navbar_icons.active,
+    .navbar_donate.active
+     {
+        display: flex;
+    } */
 }

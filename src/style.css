@@ -1,0 +1,60 @@
+:root {
+    /* color */
+    --button-color: #f9f9f9; 
+    --background-color: #007236;
+    --second-color: #8bc53f;
+    --font-color: #000000;
+
+    /* Size */   
+    --nav-font: 'Roboto', sans-serif;   
+    --size-margin: 3px 2px;
+    --size-padding: 3px 5px;
+    --size-radius:30px;
+
+     /* animation */
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+}
+
+.navbar, 
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    font-family: var(--nav-font);
+    padding: var(--size-padding);   
+}
+
+.navbar_donate {
+    position:inherit;
+    text-align: center;
+    background-color: var(--second-color);
+}
+
+li {
+    list-style: none;
+    margin: var(--size-margin);
+}
+
+input, 
+.btn {
+    padding: var(--size-padding);
+    background: var(--button-color); 
+    color: var(--font-color); 
+    display: inline-block;    
+    border-radius:var(--size-radius);
+    font-size: 0.7rem;
+}

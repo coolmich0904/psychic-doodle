@@ -66,15 +66,17 @@ li {
 .navbar_icons i {
     color: var(--color-white);
     cursor: pointer;
-      transition: transform var(--animation-duration) ease;
+    transition: transform var(--animation-duration) ease;
 }
 
-.navbar_icons i:hover
+.navbar_icons i:hover,
 .btn:hover {
     transform: scale(1.1);
 }
 
 .btn {
+    border: none;
+    margin: var(--size-margin);
     cursor: pointer;
     transition: transform var(--animation-duration) ease;
 }
@@ -88,6 +90,11 @@ input,
     border-radius:var(--size-radius);
     font-size: 0.7rem;
 }
+
+input[type="text"]:focus {
+    border-radius: var(--size-radius);
+    outline: none
+  }
 
 @media screen and (max-width: 768px) {
     .navbar {
